@@ -942,6 +942,10 @@ After iterative testing, where I ran the clustering algorithm several times with
 #### 6.1. Running the Model
 
 ```python
+# Re-vectorizing the "processed_contents" column after filtering out some rows
+# in the earlier steps.
+X = vectorizer.fit_transform(chat['processed_contents'])
+
 # The chosen optimal number of clusters.
 k = 14
 
